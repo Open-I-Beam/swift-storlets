@@ -47,13 +47,13 @@ Here is a class diagram illustrating the classes involved in the above API.
    
 #. The StorleInputStream is used to stream object's data into the storlet.
    An instance of the class is provided whenever the Storlet gets an object as
-   an input. Practically, It is used in the GET and PUT scenarios to
-   stream in the object's data and metadata. To consume the data do a getStream()
+   an input. Practically, it is used in the GET and PUT scenarios to
+   stream in the object's data and metadata. To consume the data call getStream()
    to get a java.io.InputStream on which you can just read(). To consume the 
    metadata call the getMetadata() method.
 #. The StorleOutputStream is a base class for the StorletObjectOutputStream.
-   The actual instance ever received by the storlet will be StorletObjectOutputStream 
-   The base class serves for a type of invocation that was removed for the interest
+   The actual instance received by the storlet will always be StorletObjectOutputStream,
+   the base class serves for a type of invocation that was removed for the interest
    of code simplicity.
 #. StorletObjectOutputStream. In the PUT and GET scenarios the storlet is
    called with an instance of this class.
@@ -115,7 +115,7 @@ Musts
 #. With the current implementation, a storlet must start to respond within 40
    seconds of invocation. Otherwise, Swift would timeout. Moreover, the Storlet
    must output something every 40 seconds so as not to timeout. This is a
-   mechanism to ensure that the Storlet code does not get stuck.Note that 
+   mechanism to ensure that the Storlet code does not get stuck. Note that 
    outputting an empty string does not do the job in terms of resetting the 40
    seconds timeout.
 #. For StorletObjectOutputStream, the call to setMetadata must happen before the

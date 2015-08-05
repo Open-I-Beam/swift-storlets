@@ -36,7 +36,7 @@ Below are the steps of this flow:
    it to all Swift nodes. Again, <https://github.com/Open-I-Beam/swift-storlets/blob/master/doc/source/storlets_management.rst> describes the provided tool 
    the Storlet manager can use for the actual deployment.
 
-The below sections describe in details the steps taken by the account manager
+The sections below describe in detail the steps taken by the account manager.
  
 Downloading the Docker Image
 ============================
@@ -53,7 +53,7 @@ facts:
 The image will come in a .tar format.
 
 Below is an example of downloading the image from the tenant's docker_images 
-container using the swift CLI. As with all examples using the Swicf CLI, we are
+container using the swift CLI. As with all examples using the Swift CLI, we are
 using environment variables defining the tenant, user credentials and auth URI.
 All these are required for the operation of any Swift CLI. Please change them
 accordingly.
@@ -65,7 +65,7 @@ accordingly.
   export OS_TENANT_NAME=service
   export OS_AUTH_URL=http://127.0.0.1:35357/v2.0
 
-In the below be show:
+In the below we show:
 
 #. Listing the docker_images container.
 #. Downloading the image object
