@@ -1,6 +1,6 @@
 
-This repository has moved to https://github.com/openstack/swift
-===============================================================
+This repository has moved to https://github.com/openstack/storlets
+==================================================================
 
 Swift Storlets
 ==============
